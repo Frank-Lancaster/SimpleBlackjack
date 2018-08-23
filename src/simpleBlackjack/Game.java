@@ -75,17 +75,22 @@ public class Game {
 		while(true) {
 			System.out.println("(Your total is " + playerNum + ")");
 			System.out.println("Hit? (0 for yes / 1 for no)");
-			Scanner reader = new Scanner(System.in);  
-			int n = reader.nextInt(); 
-			if(n == 0) {
-				playerHit();
-				if(playerNum > 21) {
-					compare();
+			try {
+				Scanner reader = new Scanner(System.in); 
+				int n = reader.nextInt(); 
+				if(n == 0) {
+					playerHit();
+					if(playerNum > 21) {
+						compare();
+					}
+				} else {
+					reader.close();
+					break;
 				}
-			} else {
-				reader.close();
-				break;
+			} catch (Exception e) {
+				System.out.println("(That's not 0 or 1.)");
 			}
+			
 		}
 		
 		while(true) {
