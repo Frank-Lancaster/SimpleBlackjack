@@ -1,6 +1,7 @@
 # SimpleBlackjack
 
 A simple game in the style of blackjack
+
 All that is required is to execute the jar
 
   * Dealer deals cards
